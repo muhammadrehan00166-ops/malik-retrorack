@@ -1,0 +1,9 @@
+{% extends "base.html" %}{% block title %}Checkout | Retro Rack{% endblock %}{% block content %}<section class="section narrow"><p class="eyebrow">ALMOST THERE</p><h1>Delivery details</h1><p>Please enter your contact and complete delivery address.</p><form class="form-card" method="post"><div class="form-grid">
+<label>Full Name<input required name="customer_name" value="{{ data.get('customer_name','') }}" placeholder="Your full name"></label>
+<label>Mobile Number<input required type="tel" name="mobile" value="{{ data.get('mobile','') }}" placeholder="03XXXXXXXXX"></label>
+<label>WhatsApp Number<input required type="tel" name="whatsapp" value="{{ data.get('whatsapp','') }}" placeholder="WhatsApp contact"></label>
+<label>City Name<input required name="city" value="{{ data.get('city','') }}" placeholder="Your city"></label>
+<label>Area Name<input required name="area" value="{{ data.get('area','') }}" placeholder="Your area"></label>
+<label>Nearby Famous Place<input required name="nearby" value="{{ data.get('nearby','') }}" placeholder="A nearby landmark"></label>
+<label class="wide">Complete Address<textarea required name="address" rows="3" placeholder="House number, street, block and other details">{{ data.get('address','') }}</textarea></label></div>
+<div class="checkout-total"><span>Order total</span><strong>Rs. {{ "%.0f"|format(total) }}</strong></div><button class="btn full" type="submit">Place Order</button><p class="fine-print">Please check your details before submitting.</p></form></section>{% endblock %}
