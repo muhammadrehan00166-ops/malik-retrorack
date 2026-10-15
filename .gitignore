@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+retro_rack.db
+.env
+static/uploads/*
+!static/uploads/.gitkeep
